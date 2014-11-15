@@ -1,0 +1,12 @@
+/home/vijay/.rvm/rubies/ruby-1.9.3-p448/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling parser.c
+linking shared-object json/ext/parser.so
+
+make  install
+/usr/bin/install -c -m 0755 parser.so /home/vijay/Desktop/flower-master/vendor/bundle/ruby/1.9.1/gems/json-1.8.1/ext/json/ext/parser/.gem.20141115-5729-1ttst0y/json/ext
+installing default parser libraries
