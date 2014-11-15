@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="large-9 columns ">
+  <div class="large-9 columns border" style="background-color:#e0e0e0;padding:20px;margin:70px;">
+<h3 align="center"><%= t('.Feedback') %></h3>
+<%= form_for @contact, :url => contacts_path, :html => {:class => 'formtastic'} do |f| %>
+
+  <% if ContactUs.require_name %>
+    <li class='string required' id='contact_us_contact_name_input'>
+      <%= f.label :name, (t('.name') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+      <%= f.text_field :name %>
+      <% if f.object.errors[:name].present? %>
+        <p class='inline-error'><%= f.object.errors[:name].join(' and ') %></p>
+      <% end %>
+    </li>
+  <% end %>
+  <li class='string required' id='contact_us_contact_email_input'>
+    <%= f.label :email, (t('.email') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+    <%= f.text_field :email %>
+    <% if f.object.errors[:email].present? %>
+      <p class='inline-error'><%= f.object.errors[:email].join(' and ') %></p>
+    <% end %>
+  </li>
+  <% if ContactUs.require_subject %>
+    <li class='string required' id='contact_us_contact_subject_input'>
+      <%= f.label :subject, (t('.subject') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+      <%= f.text_field :subject %>
+      <% if f.object.errors[:subject].present? %>
+        <p class='inline-error'><%= f.object.errors[:subject].join(' and ') %></p>
+      <% end %>
+    </li>
+  <% end %>
+  <li class='text required' id='contact_us_contact_message_input'>
+    <%= f.label :message, (t('.message') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+    <%= f.text_area :message %>
+    <% if f.object.errors[:message].present? %>
+      <p class='inline-error'><%= f.object.errors[:message].join(' and ') %></p>
+    <% end %>
+  </li>
+  <li class='commit'>
+    <%= f.submit :submit, :alt => t('.submit'), :class => 'submit create', :label => t('.submit'), :title => t('.submit') %>
+  </li>
+<% end %>
+
+</div>
+</div>
+<div class="large-3 columns change">
+  <h5 align="center">See Gallery</h5><hr>
+  <li><a href="/welcome/gallery">Corporate Events</a></li><br>
+<a class="border" href="/welcome/gallery"><img src="/assets/e102.gif"></a><br><br>
+<li><a href="/welcome/gallery">Complete Wedding Decorations</a></li><br>
+<a href="/welcome/gallery"><img src="/assets/w1.gif "></a><br><br>
+<li><a href="/welcome/gallery">Puja Pandal Decorations</a></li><br>
+<a href="/welcome/gallery"><img src="/assets/p100.gif"></a><br><br>
+<li><a href="/welcome/gallery">Other Events </a></li><br>
+<a href="/welcome/gallery"><img src="/assets/r4.gif"></a><br><br>
+
+
+  </div>
+
+</div>
+
+<style>
+li{
+  display: block;
+}
+.change {
+  border-left: 1px solid #C0C0C0; 
+}
+div.change img:hover{
+  border:1px solid #232323;
+}
+
+.change li{
+  text-align:center;
+  display: block;
+}
+</style>

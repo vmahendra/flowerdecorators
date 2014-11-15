@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> 
+<html class="ie6" lang="en">
+   <![endif]-->
+   <!--[if IE 7 ]>    
+   <html class="ie7" lang="en">
+      <![endif]-->
+      <!--[if IE 8 ]>    
+      <html class="ie8" lang="en">
+         <![endif]-->
+         <!--[if IE 9 ]>    
+         <html class="ie9" lang="en">
+            <![endif]-->
+            <!--[if (gt IE 9)|!(IE)]><!--> 
+            <html lang="en">
+               <!--<![endif]-->
+               <head>
+                  <meta charset="utf-8" />
+                  <!-- Uncomment to make IE8 render like IE7 -->
+                  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+                  <!-- Set the viewport width to device width for mobile -->
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                  <title><%= content_for?(:title) ? yield(:title) : "Padmavathi Flower Decorators" %></title>
+                  <link rel="shortcut icon" href="/assets/pdf.png"/>
+                  <%= stylesheet_link_tag    "application" %>
+                  <%= javascript_include_tag "vendor/custom.modernizr" %>
+                  <%= csrf_meta_tags %>
+               </head>
+               <body style="background: url(/assets/Light-Purple.jpg);">
+                  <br>
+                  <div class="row" style="border-radius:10px; background-color:#ffffff;">
+                     <div class="small-12">
+                        <div class="large-4 columns"><br> 
+                           <a href="/welcome/index"><img src="/assets/pdf.png"></a>
+                        </div>
+                        <div class="large-8 columns">
+                           <br><br>
+                           <ul class="right button-group ">
+                              <li><a href="/welcome/index" class=" button">Home</a></li>
+                              <li><a href="/welcome/aboutus" class=" button ">About Us</a></li>
+                              <li><a href="/welcome/gallery" class=" button"> Our Services</a></li>
+                              <li><a href="/welcome/contactus" class=" button">Contact Us</a></li>
+                              <li><a href="/contacts/new" class=" button">Feedback</a></li>
+                           </ul>
+                        </div>
+                       
+                        <hr>
+                     </div>
+                     
+                     <div class="large-12">
+                     <%= yield %>
+                     </div>
+
+                     
+                     
+                     <footer class="small-12 foot">
+                        
+                           <hr/>
+                           <div class="small-3 columns " align="center">
+                              <h5 align="center">Follow Us On </h5>
+                              <hr>
+                              <p><a href="http://www.facebook.com" target="_blank">Facebook</a></p>
+                              <p><a href="http://www.twitter.com" target="_blank">Twitter</a></p>
+                              <p><a href="http://www.googleplus.com" target="_blank">Googleplus</a></p>
+                           </div>
+                           <div class="small-3 columns" align="center">
+                              <h5>Our Work</h5>
+                              <hr>
+                              <p><a href="/welcome/gallery">Birthday Party Decorations</a></p>
+                              <p><a href="/welcome/gallery">Marriage Decorations</a></p>
+                              <p><a href="/welcome/gallery">Reception Decorations</a></p>
+                              <p><a href="/welcome/gallery">Any Board Decorations
+                                 </a>
+                              </p><br>
+                           </div>
+                           <div class="small-3 columns" align="center">
+                              <h5>What We Deal</h5>
+                              <hr>
+                              <p><a href="/welcome/aboutus">About Us</a></p>
+                              <p><a href="/welcome/gallery">Gallery</a></p>
+                              <p><a href="/welcome/gallery">Specialist In</a></p>
+                           </div>
+                           <div class="small-3 columns" align="center">
+                              <h5>Contact Us</h5>
+                              <hr>
+                              <p><a href="/welcome/contactus">Hyderabad</a></p>
+                           </div>
+                        
+                     </footer>
+                  </div>
+                  <p align="center"><font size="2px">© Copyright Reserved at Padmavathi Flower Decorators</font> </p>
+                  <%= javascript_include_tag "application" %>
+               </body>
+               <style type="text/css">
+                  .small-3 p{
+                  margin-bottom: 0;
+                  }
+                  .f-dropdown:after{
+                  left:75px;
+                  } 
+                  .f-dropdown:before{
+                  left:75px;
+                  }
+                  .foot p{
+                  font-size:86%;
+                  }
+               li{border-bottom-right-radius:25px;}
+               </style>
+            </html>
